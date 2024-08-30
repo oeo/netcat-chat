@@ -1,0 +1,8 @@
+chat server started
+[90m[03:22] user81322 has joined[0m
+[97m[03:22] user81322: hey[0m
+chat server started
+[90m[03:22] user95080 has joined[0m
+[90m[03:23] user95080 changed his handle to taky[0m
+[97m[03:23] taky: hello there[0m
+error handling client taky: [Errno 54] Connection reset by peer
