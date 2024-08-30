@@ -1,92 +1,67 @@
 # netcat-chat
 
-this is a simple terminal-based chat server written in python. the server allows multiple users to connect via a tcp socket and chat with each other in real-time. users can change their nickname, see a list of online users, and gracefully exit the chat. all server-side messages (such as user join/leave notifications and nick changes) are logged to a file named `chat_log.txt` and displayed in the server's console.
+a simple, colorful chat server implemented in python that can be accessed using netcat.
 
-<img src="./.assets/example.png">
+![terminal example](./.assets/example.png)
 
-## features
+## how it works
 
-- **unique handles:** each user is assigned a unique handle when they join the chat, which can be changed using the `/nick` command.
-- **color-coded messages:** system messages, such as user join/leave notifications and nick changes, are displayed in gray to differentiate them from user chat messages, which are displayed in white.
-- **input management:** the server automatically erases the user's input after they send a message. this keeps the chat output clean.
-- **command support:** users can change their nickname, view a list of online users, get a help message, and exit the chat using simple commands.
-- **logging:** all chat activity, including messages, nick changes, and join/leave events, is logged to `chat_log.txt` for auditing or review purposes.
+netcat-chat is a multi-user chat server that allows users to connect using netcat, a common networking utility. the server handles multiple connections simultaneously and provides a simple interface for chatting and performing basic commands.
 
-## usage
+### features:
 
-### prerequisites
+- connect using netcat
+- colorful output (gray for system messages, pink for user's own messages)
+- simple commands for changing nicknames, listing users, and disconnecting
+- broadcasts user join/leave messages
+- configurable port via environment variable
 
-- python 3.x installed on your machine
+### commands:
 
-### setup and running the server
+- `/nick <name>`: change your nickname
+- `/list`: show online users
+- `/?`: show help message
+- `/bye`: disconnect from chat
 
-1. save the provided script as `server.py`.
-2. open a terminal and navigate to the directory containing `server.py`.
-3. run the following command to start the server:
+## sample session:
 
-   ```bash
-   python3 server.py
-   ```
-
-   the server will start and listen on port `2222` for incoming connections.
-
-### connecting to the chat server
-
-users can connect to the chat server using any tcp client that allows raw tcp connections. `nc` (netcat) is a popular option.
-
-1. open a terminal.
-2. use `nc` to connect to the server:
-
-   ```bash
-   nc <server_ip_address> 2222
-   ```
-
-   replace `<server_ip_address>` with the ip address or hostname of the machine running the chat server.
-
-### commands
-
-- `/nick <name>`: change your nickname to `<name>`.
-- `/list`: display a list of online users.
-- `/help`: show a list of available commands.
-- `/bye` or `/exit`: gracefully exit the chat.
-
-### example session
-
-```bash
-$ nc chat.example.com 2222
-[07:14] user12345 has joined
-commands:
+```
+/? for help
+users online: 1
+[08:23] user64100 connected
+[08:23] user64100 changed his nick to taky
+users online: 1
+taky
+[08:23] taky: heyo
 /nick <name> - change your nick
 /list - show online users
-/help - show help message
-/bye or /exit - disconnect from chat
-/nick john
-[07:15] user12345 changed his handle to john
-hello everyone!
-[07:15] john: hello everyone!
-/list
-john
-user67890
-/bye
-[07:16] john has left
+/? - show help
+/bye - disconnect from chat
+your current nick is: taky
+[08:24] taky changed his nick to swrv
+users online: 1
+swrv
 ```
 
-### logging
+## how to use:
 
-chat activity is logged to `chat_log.txt` in the same directory as `server.py`. the log file includes:
+1. start the server by running the python script
+   - by default, the server uses port 2222
+   - to use a different port, set the `CHAT_PORT` environment variable:
+     ```
+     export CHAT_PORT=5000
+     python chat_server.py
+     ```
+2. connect to the server using netcat: `nc <server_ip> <port>`
+3. once connected, you'll see a welcome message and the number of online users
+4. use the commands listed above to interact with the chat
 
-- timestamps for each event
-- join and leave messages
-- nickname changes
-- chat messages
+## implementation details:
 
-### customization
+- written in python
+- uses threading to handle multiple client connections
+- implements a simple protocol for chat messages and commands
+- uses ansi color codes for colorful output
+- allows port configuration via the `CHAT_PORT` environment variable
 
-- **port number:** to change the port number, modify the `server.bind(('0.0.0.0', 2222))` line in `server.py` to use the desired port.
-- **handle format:** to adjust the format of the unique handles assigned to users, modify the `generate_handle()` function.
-- **colors:** colors are handled using ansi escape codes. these can be adjusted by changing the values of `GRAY`, `WHITE`, and `RESET` in the script.
-
-## conclusion
-
-this chat server provides a simple yet functional interface for multiple users to communicate in real-time via a terminal. it supports essential chat functionalities like nicknames, user listings, and connection management. although it has basic features, it is extensible and can be customized to suit more complex use cases.
-
+enjoy chatting!
