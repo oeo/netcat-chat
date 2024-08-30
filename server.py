@@ -68,7 +68,6 @@ def handle_client(client_socket, addr):
                 broadcast(goodbye_message, client)
                 logging.info(goodbye_message)
                 print(goodbye_message)  # Print to server terminal
-                client_socket.send(f"{GRAY}l8{RESET}\n".encode())
                 break
             else:
                 formatted_message = format_message(f"{client.handle}: {message}")
