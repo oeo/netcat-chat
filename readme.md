@@ -6,11 +6,11 @@ a simple, colorful chat server implemented in python that can be accessed using 
 
 ## how it works
 
-netcat-chat is a multi-user chat server that allows users to connect using netcat, a common networking utility. the server handles multiple connections simultaneously and provides a simple interface for chatting and performing basic commands.
+netcat-chat is a multi-user chat server that allows users to connect using netcat or telnet, common networking utilities. the server handles multiple connections simultaneously and provides a simple interface for chatting and performing basic commands.
 
 ### features:
 
-- connect using netcat
+- connect using netcat or telnet
 - colorful output (gray for system messages, pink for user's own messages)
 - simple commands for changing nicknames, listing users, and disconnecting
 - broadcasts user join/leave messages
