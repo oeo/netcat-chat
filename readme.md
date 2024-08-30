@@ -2,6 +2,8 @@
 
 this is a simple terminal-based chat server written in python. the server allows multiple users to connect via a tcp socket and chat with each other in real-time. users can change their nickname, see a list of online users, and gracefully exit the chat. all server-side messages (such as user join/leave notifications and nick changes) are logged to a file named `chat_log.txt` and displayed in the server's console.
 
+<img src="./.assets/example.png">
+
 ## features
 
 - **unique handles:** each user is assigned a unique handle when they join the chat, which can be changed using the `/nick` command.
