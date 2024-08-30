@@ -6,3 +6,67 @@ chat server started
 [90m[03:23] user95080 changed his handle to taky[0m
 [97m[03:23] taky: hello there[0m
 error handling client taky: [Errno 54] Connection reset by peer
+chat server started
+[90m[03:55] user71501 has joined[0m
+[90m[03:55] user71501 changed his handle to helo[0m
+[90m[03:56] user15809 has joined[0m
+[90m[03:56] user97167 has joined[0m
+error handling client helo: [Errno 54] Connection reset by peer
+[90m[03:56] helo has left[0m
+[90m[03:56] user15809 changed his handle to what[0m
+error handling client user97167: [Errno 54] Connection reset by peer
+[90m[03:56] user97167 has left[0m
+chat server started
+[90m[03:58] user71638 connected[0m
+[97m[03:58] user71638: hey[0m
+[90m[03:58] user36542 connected[0m
+[97m[03:59] user71638: hello[0m
+error handling client user36542: [Errno 54] Connection reset by peer
+[90m[03:59] user36542 disconnected[0m
+chat server started
+[90m[04:00] user58801 connected[0m
+[97m[04:00] user58801: hello[0m
+[90m[04:00] user85263 connected[0m
+[97m[04:00] user85263: yoo[0m
+[90m[04:00] user85263 disconnected[0m
+[90m[04:00] user64781 connected[0m
+[90m[04:00] user64781 changed his handle to tky[0m
+[97m[04:00] tky: /nick[0m
+chat server started
+[90m[04:05] user71247 connected[0m
+[90m[04:05] user71247 changed his handle to taky[0m
+[90m[04:05] user71645 connected[0m
+[90m[04:07] user71645 disconnected[0m
+[90m[04:07] taky disconnected[0m
+[90m[04:07] user18911 connected[0m
+[90m[04:07] user18911 disconnected[0m
+chat server started
+[90m[04:08] [96muser15890[0m connected[0m
+[97m[04:08] [96muser15890[0m: helo[0m
+[97m[04:08] [96muser15890[0m: list[0m
+[90m[04:08] [96muser15890[0m disconnected[0m
+chat server started
+[90m[04:09] [96muser53147[0m connected[0m
+[97m[04:09] [95muser53147[0m: helo[0m
+[90m[04:09] [96muser53147[0m changed his handle to [96mtaky[0m[0m
+[97m[04:10] [95mtaky[0m: how goes it[0m
+[97m[04:10] [95mtaky[0m: lelelllelel[0m
+[97m[04:10] [95mtaky[0m: http://www.google.com[0m
+[97m[04:10] [95mtaky[0m: /?[0m
+chat server started
+[90m[04:13] user76562 connected[0m
+[97m[04:13] [95muser76562[0m: hello[0m
+[90m[04:14] user76562 changed his handle to taky[0m
+[90m[04:14] taky disconnected[0m
+chat server started
+[90m[04:17] user36107 connected[0m
+[90m[04:18] user36107 disconnected[0m
+chat server started
+[90m[04:20] user98921 connected[0m
+[97m[04:20] [95muser98921[0m: hello[0m
+[97m[04:20] [95muser98921[0m: ok whatever man[0m
+[90m[04:20] user28487 connected[0m
+[90m[04:20] user28487 changed his nick to taky[0m
+[97m[04:20] [95mtaky[0m: heyo[0m
+[97m[04:21] [95muser98921[0m: yo[0m
+[90m[04:21] user98921 disconnected[0m
